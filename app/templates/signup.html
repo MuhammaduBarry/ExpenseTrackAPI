@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/output.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <script src="{{ url_for('static', filename='js/routes.js') }}" defer></script>
     <title>Signup Page</title>
 </head>
 <body class="font-serif">
-    <!-- component -->
-  <!-- page -->
-  <main
-    class="mx-auto flex min-h-screen w-full items-center justify-center text-black">
-    <!-- component -->
-    <section class="flex w-[30rem] flex-col space-y-10">
+  <!-- Page -->
+  <main class="mx-auto flex min-h-screen w-full items-center justify-center text-black">
+    <form action="/signup" method="POST" class="flex w-[30rem] flex-col space-y-10">
       <div class="text-center text-4xl font-medium">Sign up</div>
 
-      <div
-        class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
-      >
+      <!-- Username Input -->
+      <div class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500">
         <input
+          id="username"
+          name="username"
           type="text"
           placeholder="Email or Username"
           class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+          required
         />
       </div>
 
-      <div
-        class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
-      >
+      <!-- Password Input -->
+      <div class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500">
         <input
+          id="password"
+          name="password"
           type="password"
           placeholder="Password"
           class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+          required
         />
       </div>
 
+      <!-- Submit Button -->
       <button
+        type="submit"
         class="transform rounded-sm bg-blue-600 py-2 font-bold duration-300 hover:bg-indigo-400 cursor-pointer"
       >
         SIGN UP
       </button>
-
-    </section>
+    </form>
   </main>
 </body>
 </html>

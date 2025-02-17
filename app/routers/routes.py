@@ -1,8 +1,4 @@
-import sqlite3
-
-from flask import Flask, request, jsonify, render_template, Blueprint
-from flask_bcrypt import Bcrypt
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from flask import render_template, Blueprint
 
 # Create a Blueprint for routes enabling modularity
 routes: Blueprint = Blueprint("routes", __name__)
