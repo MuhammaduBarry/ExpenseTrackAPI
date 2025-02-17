@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/output.css')}}">
+    <title>Landing Page</title>
+</head>
+<body class="font-serif flex flex-col min-h-screen">
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-10">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-xl font-bold text-gray-800">Expense Tracker</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <a href="#" class="bg-primary text-black px-4 py-2 rounded-md cursor-pointer">Log In</a>
+                <a href="#" class="bg-primary text-black px-4 py-2 rounded-md cursor-pointer">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex justify-center items-center">
+        <section class="py-20 w-full">  <div class="container mx-auto px-4 text-center"> <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-800 leading-tight"> Simplify Your Expenses with Expense Tracker
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl mb-8 text-black leading-relaxed"> Track, manage, and optimize your spending with ease.
+                </p>
+                <a href="#" class="bg-primary text-black px-6 py-3 rounded-md text-base sm:text-lg font-semibold cursor-pointer"> Start Tracking Free
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-max-lg: 1280px;
+}
