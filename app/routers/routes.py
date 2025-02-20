@@ -26,11 +26,3 @@ def singup() -> str:
     :return: str
     """
     return render_template("signup.html")
-
-@routes.route("/app")
-def app() -> str:
-    """
-    App page
-    :return: str
-    """
-    return render_template("app.html")
