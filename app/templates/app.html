@@ -11,9 +11,9 @@
 
     <div class="container mx-auto">
 
-        <h1 class="text-3xl font-bold mb-4">Expenses</h1>
+        <a href="/app" class="text-3xl font-bold">Expenses</a>
 
-        <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-4">
+        <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-4 mt-4">
             <div class="flex flex-col lg:flex-row lg:items-center lg:flex-wrap lg:justify-evenly gap-4">
                 <input type="text" placeholder="Search expenses..." class="w-full lg:w-auto bg-white border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <select class="bg-white border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full lg:w-auto" id="sort-by">
@@ -66,11 +66,17 @@
             </table>
         </div>
 
-        <div class="mt-4">
-            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                Create New Expense
-            </button>
-        </div>
+<div class="flex justify-between mt-4">
+    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        Create New Expense
+    </button>
+    <form action="/app"  method="post" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <button type="submit">
+            Logout
+        </button>
+    </form>
+</div>
+
 
     </div>
 
@@ -80,23 +86,6 @@
             display: none;
         }
     </style>
-    <script>
-        function toggleDateRange() {
-            var filterBy = document.getElementById("filter-by");
-            var customDateRange = document.getElementById("custom-date-range");
-
-            if (filterBy.value === "custom") {
-                customDateRange.style.display = "block";
-            } else {
-                customDateRange.style.display = "none";
-            }
-        }
-
-        function applyFilters() {
-            // Implement filter logic here
-            console.log("Filters applied!");
-        }
-    </script>
 
 </body>
 

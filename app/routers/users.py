@@ -1,6 +1,9 @@
+from tkinter import BooleanVar
+
 from flask import Blueprint, request, jsonify, render_template, session, current_app, redirect, url_for, make_response, Response
 import sqlite3
 import bcrypt
+from werkzeug import Response
 
 from app.routers.db import create_user_table, connect_db
 
@@ -9,7 +12,7 @@ data: Blueprint = Blueprint("data", __name__)
 create_user_table()
 
 @data.route("/signup", methods=["POST"])
-def add_new_user():
+def add_new_user() -> tuple[Response, int] | Response:
     username = request.form.get("username")
     password = request.form.get("password")
 
@@ -49,7 +52,7 @@ def get_user(username: str):
         conn.close()
 
 
-def check_password(password, hashed_password):
+def check_password(password, hashed_password) -> bool:
     if bcrypt.checkpw(password.encode(), hashed_password.encode()):
         return True
 
